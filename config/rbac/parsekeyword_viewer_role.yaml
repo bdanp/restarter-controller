@@ -1,0 +1,23 @@
+# permissions for end users to view parsekeywords.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: database-restarter
+    app.kubernetes.io/managed-by: kustomize
+  name: parsekeyword-viewer-role
+rules:
+- apiGroups:
+  - apps.bidhan.com
+  resources:
+  - parsekeywords
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - apps.bidhan.com
+  resources:
+  - parsekeywords/status
+  verbs:
+  - get

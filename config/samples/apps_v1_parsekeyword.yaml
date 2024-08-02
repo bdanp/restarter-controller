@@ -1,0 +1,9 @@
+apiVersion: apps.bidhan.com/v1
+kind: ParseKeyWord
+metadata:
+  labels:
+    app.kubernetes.io/name: database-restarter
+    app.kubernetes.io/managed-by: kustomize
+  name: parsekeyword-sample
+spec:
+  # TODO(user): Add fields here
